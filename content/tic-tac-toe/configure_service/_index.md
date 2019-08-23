@@ -7,3 +7,6 @@ weight: 50
 # 서비스 구성
 
 이제 사전 준비 작업이 끝났습니다. ECS 서비스를 만들고 실제 게임과 대시보드를 띄워보겠습니다.
+
+
+![Example Service](/images/tic-tac-toe/diagram-make-services.png)

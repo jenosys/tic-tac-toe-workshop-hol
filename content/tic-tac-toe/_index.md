@@ -18,3 +18,6 @@ weight: 23
 실습은 다 해보는데는 2시간이 예상됩니다.
 
 시작하겠습니다.
+
+
+![Example Service](/images/tic-tac-toe/diagram-complete.png)

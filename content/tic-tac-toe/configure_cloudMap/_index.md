@@ -8,3 +8,5 @@ weight: 40
 
 AWS 클라우드 맵은 완전 관리형 서비스 디스커버리 서비스 입니다.
 
+
+![Example Service](/images/tic-tac-toe/diagram-make-cloudmap.png)
