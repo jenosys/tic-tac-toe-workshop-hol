@@ -25,3 +25,5 @@ weight: 1
 # 컨테이너로 제시하는 데디케이티드 서버 운영 방법
 이 랩을 통해 여러분은 Amazon ECS와 AWS CloudMap을 활용하여 사람의 관리 포인트를 최소한으로 줄이면서도
 안정적이고 유연한 운영환경을 만들어보게 됩니다.
+
+![Example Service](/images/tic-tac-toe/diagram-architecture.png)

@@ -38,13 +38,19 @@ EC2 타입은 EC2 클러스터를 필요로 합니다.<br>
  * **Cluster VPC**: tic-tac-toe-vpc
  * **Subnets**: 선택가능한 모든 서브넷
  * **Security groups**: **Edit선택**<br>
- tic-tac-toe-server-SG 를 만든적 있다면, 이것을 선택합니다.
+
+- tic-tac-toe-server-SG 이 이미 있다면
+
+ 1. tic-tac-toe-server-SG를 선택합니다.
 
 - 처음이라면
 
-1. **Create new security group**을 선택하고 이름에 tic-tac-toe-server-SG 을 입력합니다.
-1. 인바운드 규칙을 CUSTOM TCP 3553로 입력합니다.
-1. **Save** 를 선택합니다.
+ 1. **Create new security group**을 선택하고 이름에 tic-tac-toe-server-SG 을 입력합니다.
+ 1. 인바운드 규칙을 CUSTOM TCP 3553로 입력합니다.
+ 1. **Save** 를 선택합니다.
+
+
+
 ![Example Service](/images/tic-tac-toe/dedi-fargate-3.png)
 
 * **Auto-assign public IP**: ENABLED

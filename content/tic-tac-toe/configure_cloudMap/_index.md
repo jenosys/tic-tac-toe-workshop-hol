@@ -1,7 +1,7 @@
 ---
 title: "클라우드맵 구성"
 chapter: true
-weight: 40
+weight: 10
 ---
 
 # 클라우드맵

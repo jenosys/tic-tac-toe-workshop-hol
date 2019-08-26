@@ -1,7 +1,7 @@
 ---
 title: "작업 정의 구성"
 chapter: true
-weight: 30
+weight: 40
 ---
 
 # 작업 정의 구성
