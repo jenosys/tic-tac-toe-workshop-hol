@@ -67,14 +67,14 @@
 	"title": "ECS 클러스터 생성",
 	"tags": [],
 	"description": "",
-	"content": " ECS 클러스터 생성하기 이 챕터에서는 앞으로 사용할 ECS 클러스터를 생성합니다.\n"
+	"content": " ECS 클러스터 생성하기 이 챕터에서는 앞으로 사용할 ECS 클러스터를 생성합니다.\nEC2로 이뤄어진 클러스터 위에서 4종류의 여러 작업이 수행됩니다.\n"
 },
 {
 	"uri": "/tic-tac-toe/run_dedi_servers/run_fargate/",
 	"title": "게임 서버를 파게이트로 띄우기",
 	"tags": [],
 	"description": "",
-	"content": " 앞서 게임서버는 EC2 타입의 작업으로 띄웠습니다.\nEC2 타입은 EC2 클러스터를 필요로 합니다.\n이번에는 서버리스 타입인 파게이트로 게임서버를 만들어서 띄워보겠습니다.\n작업 정의 추가  ECS/Task Definitions/tic-tac-toe-server 를 선택합니다. 가장 최근 리비전을 선택합니다. (문서대로 왔다면 tic-tac-toe-server:1) 입니다. 상단의 Create new revision 을 선택합니다. 몇가지만 바꿔서 Fargate타입으로 바꿉니다. 아래 내용을 입력하세요.  Task Definition Name: tic-tac-toe-server-fargate Network Mode: awsvpc Requires compatibilities: FARGATE 만 선택 Task memory: 0.5GB Task CPU: 0.25 vCPU   하단의 Create을 선택합니다. 새롭게 tic-tac-toe-server-fargate 작업 정의가 생긴것을 볼 수 있습니다.\n작업 실행  Cluster/tic-tac-toe-cluster 를 선택합니다. Tasks 탭을 선택하고 Run new Task를 선택합니다. 아래처럼 입력합니다.  Launch type: FARGATE Task Definition: tic-tac-toe-server-fargate:1 Number of tasks: 5 Cluster VPC: tic-tac-toe-vpc Subnets: 선택가능한 모든 서브넷 Security groups: Edit선택\ntic-tac-toe-server-SG 를 만든적 있다면, 이것을 선택합니다.    처음이라면   Create new security group을 선택하고 이름에 tic-tac-toe-server-SG 을 입력합니다. 인바운드 규칙을 CUSTOM TCP 3553로 입력합니다. Save 를 선택합니다.    Auto-assign public IP: ENABLED  Run Task를 선택하여 작업을 수행합니다. 대시보드에서 확인 콘솔에서 파게이트 게임 서버가 뜨는것을 확인 할 수 있습니다.\n이후 대시보드로 돌아가서 보면 파게이트 게임 서버가 추가로 준비하고 있습니다. "
+	"content": " 앞서 게임서버는 EC2 타입의 작업으로 띄웠습니다.\nEC2 타입은 EC2 클러스터를 필요로 합니다.\n이번에는 서버리스 타입인 파게이트로 게임서버를 만들어서 띄워보겠습니다.\n작업 정의 추가  ECS/Task Definitions/tic-tac-toe-server 를 선택합니다. 가장 최근 리비전을 선택합니다. (문서대로 왔다면 tic-tac-toe-server:1) 입니다. 상단의 Create new revision 을 선택합니다. 몇가지만 바꿔서 Fargate타입으로 바꿉니다. 아래 내용을 입력하세요.  Task Definition Name: tic-tac-toe-server-fargate Network Mode: awsvpc Requires compatibilities: FARGATE 만 선택 Task memory: 0.5GB Task CPU: 0.25 vCPU   하단의 Create을 선택합니다. 새롭게 tic-tac-toe-server-fargate 작업 정의가 생긴것을 볼 수 있습니다.\n작업 실행  Cluster/tic-tac-toe-cluster 를 선택합니다. Tasks 탭을 선택하고 Run new Task를 선택합니다. 아래처럼 입력합니다.  Launch type: FARGATE Task Definition: tic-tac-toe-server-fargate:1 Number of tasks: 5 Cluster VPC: tic-tac-toe-vpc Subnets: 선택가능한 모든 서브넷 Security groups: Edit선택\n    tic-tac-toe-server-SG 이 이미 있다면\n tic-tac-toe-server-SG를 선택합니다.  처음이라면\n Create new security group을 선택하고 이름에 tic-tac-toe-server-SG 을 입력합니다. 인바운드 규칙을 CUSTOM TCP 3553로 입력합니다. Save 를 선택합니다.    Auto-assign public IP: ENABLED  Run Task를 선택하여 작업을 수행합니다. 대시보드에서 확인 콘솔에서 파게이트 게임 서버가 뜨는것을 확인 할 수 있습니다.\n이후 대시보드로 돌아가서 보면 파게이트 게임 서버가 추가로 준비하고 있습니다. "
 },
 {
 	"uri": "/tic-tac-toe/run_dedi_servers/run_game/",
@@ -102,7 +102,7 @@
 	"title": "ECS 클러스터 생성하기",
 	"tags": [],
 	"description": "",
-	"content": " ECS 클러스터 생성하기  상단의 왼쪽의 Services 메뉴를 통해 ECS로 넘어갑니다. 상단 우측 메뉴에서 현재 리전이 Oregon인지 확인합니다. 왼쪽 사이드 메뉴에서 Cluster를 선택하고 Create Cluster를 선택합니다. 클러스터 종류는 EC2 Linux + Networking 을 선택하고 Next step을 선택합니다.  Cluster name 에 tic-tac-toe-cluster 를 적습니다. EC2 instance type은 m5.2xlarge를 선택합니다. Number of instances는 3을 입력합니다. key pair는 앞서 만든 tic-tac-toe 을 선택합니다.  Networking항목에서 Create VPC를 선택해서 새로운 VPC를 생성합니다. CIDR block 및 Subnet 설정은 그대로 둡니다.\n Container instance IAM role은 앞서 만든 tic-tac-toe-ecs-role 을 넣습니다.\n 하단의 Create를 선택하여 다음으로 넘어갑니다.  클러스터와 VPC가 생성되는데 시간이 조금 필요합니다. 만들어진 VPC 아이디를 기억하고 있으면 편리합니다.\n  "
+	"content": " ECS 클러스터 생성하기  상단의 왼쪽의 Services 메뉴를 통해 ECS로 넘어갑니다. 상단 우측 메뉴에서 현재 리전이 Oregon인지 확인합니다. 왼쪽 사이드 메뉴에서 Cluster를 선택하고 Create Cluster를 선택합니다. 클러스터 종류는 EC2 Linux + Networking 을 선택하고 Next step을 선택합니다.  Cluster name에 tic-tac-toe-cluster 을 입력합니다. instance configureation항목에 아래 내용을 입력합니다.\n EC2 instance type: m5.large Number of instances: 3 key pair: tic-tac-toe 기타 항목은 기본값으로 둡니다.   Networking항목 아래 내용으로 입력합니다.\n VPC: Create VPC 선택 Container instance IAM role: tic-tac-toe-ecs-role 선택 기타 항목은 기본값으로 둡니다.  하단의 Create를 선택하여 다음으로 넘어갑니다.  클러스터와 VPC가 생성되는데 시간이 조금 필요합니다.\n만들어진 VPC 아이디를 기억하고 있으면 편리합니다.\n  "
 },
 {
 	"uri": "/tic-tac-toe/configure_service/make_service_matchmaker/",
@@ -116,14 +116,14 @@
 	"title": "매치메이커 타겟 그룹 만들기",
 	"tags": [],
 	"description": "",
-	"content": " EC2 서비스로 넘어갑니다. 좌측 사이드 메뉴에서 Target Groups를 선택하고 Create target group을 선택하고 아래와 같이 입력합니다.   Target group name: matchmaker Target type: instance VPC: tic-tac-toe-vpc Port: 8888 Health check settings/Path: /api/health  나머지 항목은 기본값으로 둡니다.\n헬스체크 시간을 단축하기 위해 Advanced health check settings의 파라메터를 아래와 같이 수정합니다.\n Healthy threshold: 2 Interval: 10  Create를 선택하여 타겟그룹을 생성합니다.\n"
+	"content": " EC2 서비스로 넘어갑니다. 좌측 사이드 메뉴에서 Target Groups를 선택하고 Create target group을 선택하고 아래와 같이 입력합니다.\n Target group name: matchmaker Target type: instance VPC: tic-tac-toe-vpc Port: 8888 Health check settings/Path: /api/health 나머지 항목은 기본값으로 둡니다.   헬스체크 시간을 단축하기 위해 Advanced health check settings의 파라메터를 아래와 같이 수정합니다.\n Healthy threshold: 2 Interval: 10   Create를 선택하여 타겟그룹을 생성합니다.\n"
 },
 {
 	"uri": "/tic-tac-toe/build_cluster/edit_sg/",
 	"title": "보안그룹 수정",
 	"tags": [],
 	"description": "",
-	"content": "클러스터를 만들면서 자동으로 생성된 보안그룹은 우리가 원하는 포트를 포함하고 있지 않습니다. 이를 수정해줍니다.\n 상단의 왼쪽의 Services 메뉴를 통해 EC2로 넘어갑니다. 좌측 사이드 메뉴에서 Security Groups를 선택합니다. 필터에서 tic-tac-toe-cluster를 입력합니다. 하단에 하나의 보안그룹이 나타압니다. 보안그룹을 선택하고 하단의 탭 메뉴에서 Inbound를 선택합니다. Edit를 선택합니다. 아래와 같이 수정합니다.\n 22 포트 혀용, 소스는 any 8888 포트 허용, 소스는 any 32768-60999 포트 허용, 소스는 any   Save를 선택하여 보안그룹을 생성합니다.\n"
+	"content": "클러스터를 만들면서 자동으로 생성된 보안그룹은 우리가 원하는 포트를 포함하고 있지 않습니다. 이를 수정해줍니다.\n 상단의 왼쪽의 Services 메뉴를 통해 EC2로 넘어갑니다. 좌측 사이드 메뉴에서 Security Groups를 선택합니다. 필터에서 tic-tac-toe-cluster를 입력합니다. 하단에 하나의 보안그룹이 나타납니다. 보안그룹을 선택하고 하단의 탭 메뉴에서 Inbound를 선택합니다. Edit를 선택합니다. 아래와 같이 수정합니다.\n 22 포트 혀용, 소스는 0.0.0.0/0 8888 포트 허용, 소스는 0.0.0.0/0 32768-60999 포트 허용, 소스는 0.0.0.0/0   Save를 선택하여 보안그룹을 생성합니다.\n"
 },
 {
 	"uri": "/cleanup/delete_cloudmap/",
@@ -137,7 +137,7 @@
 	"title": "대시보드 타겟 그룹 만들기",
 	"tags": [],
 	"description": "",
-	"content": " 타겟그룹을 2개 더 만듭니다.\n대시보드 타겟 그룹 생성 앞서 만든 매치메이커 타겟그룹과 과정은 동일합니다.\n Create target group을 선택하고 아래와 같이 입력합니다. Target group name: dashboard Target type: ip VPC: tic-tac-toe-vpc Port: 80 Health check settings - Path: /  나머지 항목은 기본값으로 둡니다.\n헬스체크 시간을 단축하기 위해 Advanced health check settings의 파라메터를 아래와 같이 수정합니다.\n Healthy threshold: 2 Interval: 10  Create를 선택하여 타겟그룹을 생성합니다.\n클라이언트 타겟 그룹 생성 Create target group을 선택하고 아래와 같이 입력합니다. 위에서 만든 dashboard 타겟 그룹과 이름만 다릅니다.\n Target group name: tic-tac-toe-client Target type: ip VPC: tic-tac-toe-vpc Port: 80 Health check settings - Path: /  Create를 선택하여 타겟그룹을 생성합니다.\n결과 화면 3개의 타겟그룹을 다 만들고 나면 다음과 같은 결과화면을 보게됩니다. Port와 Target type을 확인하시기 바랍니다.\n"
+	"content": " 타겟그룹을 2개 더 만듭니다.\n대시보드 타겟 그룹 생성 앞서 만든 매치메이커 타겟그룹과 과정은 동일합니다.\n Create target group을 선택하고 아래와 같이 입력합니다.  Target group name: dashboard Target type: ip VPC: tic-tac-toe-vpc Port: 80 Health check settings - Path: / 나머지 항목은 기본값으로 둡니다.    헬스체크 시간을 단축하기 위해 Advanced health check settings의 파라메터를 아래와 같이 수정합니다.\n Healthy threshold: 2 Interval: 10   Create를 선택하여 타겟그룹을 생성합니다.\n클라이언트 타겟 그룹 생성  Create target group을 선택하고 아래와 같이 입력합니다.  Target group name: tic-tac-toe-client Target type: ip VPC: tic-tac-toe-vpc Port: 80 Health check settings - Path: /   Create를 선택하여 타겟그룹을 생성합니다.\n결과 화면 3개의 타겟그룹을 다 만들고 나면 다음과 같은 결과화면을 보게됩니다. Port와 Target type을 확인하시기 바랍니다.\n"
 },
 {
 	"uri": "/tic-tac-toe/configure_service/make_service_done/",
@@ -161,13 +161,6 @@
 	"content": " Cloud9 서비스로 갑니다. 이름이 tic-tac-toe-workshop 인 enviorment를 선택하고 Delete를 눌러 삭제합니다.  "
 },
 {
-	"uri": "/tic-tac-toe/configure_ecr/",
-	"title": "ECR 구성",
-	"tags": [],
-	"description": "",
-	"content": " ECR 구성 소스에는 총 4개의 프로젝트가 포함되어 있습니다.\n우리는 프로젝트마다 컨테이어로 묶어서 개별 리파지토리에 올리게 됩니다.\n"
-},
-{
 	"uri": "/tic-tac-toe/configure_ecr/make_first_ecr/",
 	"title": "첫번째 리포지토리 만들기",
 	"tags": [],
@@ -180,6 +173,13 @@
 	"tags": [],
 	"description": "",
 	"content": " 여기서 만드는 네임스페이스와 서비스이름은 소스에 하드코딩으로 들어가있습니다. 따라서 이름을 정확히 입력해야 합니다. 오타가 생겼다면 삭제하고 다시 만듭니다.\n 네임스페이스 생성  서비스 에서 AWS Cloud Map 을 선택합니다. Create namespace 를 선택합니다. Namespace name은 tic-tac-toe 이고 Instance discovery타입은 API calls 입니다. Create namespace를 선택합니다. 네임스페이스가 생성되는데 시간이 조금 걸립니다. 생성이 완료되면 화면이 갱신됩니다. 기다려도 반응이 없다면 새로고침을 합니다. 생성된 tic-tac-toe 네임스페이스를 클릭해서 들어갑니다.  서비스 생성  Create service를 선택합니다. service name은 dedi-servers 로 입력합니다. Health check configuration은 No health check를 선택합니다. Create service를 선택합니다.  "
+},
+{
+	"uri": "/tic-tac-toe/configure_cloudmap/",
+	"title": "클라우드맵 구성",
+	"tags": [],
+	"description": "",
+	"content": " 클라우드맵 AWS 클라우드 맵은 완전 관리형 서비스 디스커버리 서비스 입니다.\n이 챕터에서 만들 클라우드맵에 게임서버의 정보가 기록되게 됩니다.\n"
 },
 {
 	"uri": "/prerequisites/workspace/",
@@ -200,7 +200,7 @@
 	"title": "ALB 만들기",
 	"tags": [],
 	"description": "",
-	"content": " 매치메이커 로드밸런서 생성 기본 설정  사이드 메뉴에서 Load Balancers 메뉴를 선택하고 Create Load Balancer를 선택합니다. Application Load Balancer를 선택합니다. 아래와 같이 내용을 입력합니다.   Name: matchmaker-ALB Availablility Zones 의 VPC: tic-tac-toe-vpc Availability Zones의 모든 항목을 체크  가용영역 (Availability Zones)은 워크샵을 하는 사람에따라 다르게뜰 수 있습니다.\nus-west-2a, us-west-2b 가 아니라 us-west-2c, us-west-2d 가 나올수도 있습니다.\nus-west-2로 시작하면 문제 없으니 모두 선택해줍니다.\n 다른 항목은 기본값을 사용합니다.\nNext을 선택하여 다음 화면으로 넘어갑니다.\n보안 설정 HTTPS를 사용하지 않아서 나오는 경고는 무시합니다.\nNext을 선택하여 다음 화면으로 넘어갑니다.\n보안 그룹 설정  Security Groups 에서 Create a new security group 선택합니다. Security group name: WebServer-SG 입력합니다. 포트 설정은 기본값을 그대로 둡니다.  Next을 선택하여 다음 화면으로 넘어갑니다.\n라우팅 설정 Routing 설정에서 아래와 같이 입력합니다.\n Target group: Existing target group Name: matchmaker 선택  Review 화면까지이 나올때까지 Next선택을 선택합니다.\n리뷰 Create 선택하고 ALB를 생성합니다.\n로드밸런서가 생성되고 나면 리스트 화면에서 퍼블릭 주소를 복사해서 기록해 놓습니다. 나중에 필요합니다.\n대시보드 로드밸런서 매치메이커 로드밸런서와 만드는 과정은 동일하며, 입력값만 아래처럼 넣습니다.\n Name: dashboard-ALB Availablility Zones 의 VPC: tic-tac-toe-vpc Availability Zones의 모든 항목을 체크 Security Group: 앞서 만든 WebServer-SG을 선택 Target group: Existing target group Name: dashboard 선택  로드밸런서가 생성되고 나면 리스트 화면에서 퍼블릭 주소를 복사해서 기록해 놓습니다.\n클라이언트 로드밸런서 대시보드 로드밸런서와 만드는 방식은 동일하며, 파라메터만 다음과 같이 입력한다.\n Name: tic-tac-toe-client-ALB Availablility Zones 의 VPC: tic-tac-toe-vpc Availability Zones의 모든 항목을 체크 Security Group: 앞서 만든 WebServer-SG을 선택 Target group: Existing target group Name: tic-tac-toe-client 선택  로드밸런서가 생성되고 나면 리스트 화면에서 퍼블릭 주소를 복사해서 기록해 놓습니다.\n"
+	"content": " 매치메이커 로드밸런서 생성 기본 설정  사이드 메뉴에서 Load Balancers 메뉴를 선택하고 Create Load Balancer를 선택합니다. Application Load Balancer를 선택합니다. 아래와 같이 내용을 입력합니다.\n Name: matchmaker-ALB Availablility Zones 의 VPC: tic-tac-toe-vpc Availability Zones의 모든 항목을 체크 다른 항목은 기본값을 사용합니다. 가용영역 (Availability Zones)은 워크샵을 하는 사람에따라 다르게뜰 수 있습니다.\nus-west-2a, us-west-2b 가 아니라 us-west-2c, us-west-2d 가 나올수도 있습니다.\nus-west-2로 시작하면 문제 없으니 모두 선택해줍니다.\n   Next을 선택하여 다음 화면으로 넘어갑니다.\n  보안 설정 HTTPS를 사용하지 않아서 나오는 경고는 무시합니다.\nNext을 선택하여 다음 화면으로 넘어갑니다.\n보안 그룹 설정  Security Groups 에서 Create a new security group 선택합니다. Security group name: WebServer-SG 입력합니다. 포트 설정은 기본값을 그대로 둡니다.  Next을 선택하여 다음 화면으로 넘어갑니다.\n  라우팅 설정  Routing 설정에서 아래와 같이 입력합니다.\n Target group: Existing target group Name: matchmaker 선택   Review 화면까지이 나올때까지 Next선택을 선택합니다.\n  리뷰 Create 선택하고 ALB를 생성합니다.\n로드밸런서가 생성되고 나면 리스트 화면에서 퍼블릭 주소를 복사해서 기록해 놓습니다. 나중에 필요합니다.\n대시보드 로드밸런서 매치메이커 로드밸런서와 만드는 과정은 동일하며, 파라메터만 아래처럼 넣습니다.\n Name: dashboard-ALB Availablility Zones 의 VPC: tic-tac-toe-vpc Availability Zones의 모든 항목을 체크 Security Group: 앞서 만든 WebServer-SG을 선택 Target group: Existing target group Name: dashboard 선택  로드밸런서가 생성되고 나면 리스트 화면에서 퍼블릭 주소를 복사해서 기록해 놓습니다.\n클라이언트 로드밸런서 대시보드 로드밸런서와 만드는 방식은 동일하며, 파라메터만 다음과 같이 입력합니다.\n Name: tic-tac-toe-client-ALB Availablility Zones 의 VPC: tic-tac-toe-vpc Availability Zones의 모든 항목을 체크 Security Group: 앞서 만든 WebServer-SG을 선택 Target group: Existing target group Name: tic-tac-toe-client 선택  로드밸런서가 생성되고 나면 리스트 화면에서 퍼블릭 주소를 복사해서 기록해 놓습니다.\n"
 },
 {
 	"uri": "/tic-tac-toe/configure_ecr/make_others_ecr/",
@@ -249,7 +249,7 @@
 	"title": "ALB 구성",
 	"tags": [],
 	"description": "",
-	"content": " ALB 구성 "
+	"content": " ALB 구성 이 챕터에서는 후에 ECS 서비스에 연결할 3개의 ALB(Application Load Balancer)를 만듭니다.\n"
 },
 {
 	"uri": "/tic-tac-toe/run_dedi_servers/end_workshop/",
@@ -301,11 +301,11 @@
 	"content": " 다음 링크를 누르세요 Cloud9 EC2 instance 화면 인스턴스를 선택하고, 다음을 선택합니다. Actions / Instance Settings / Attach/Replace IAM Role  IAM Role 항목을 tic-tac-toe-workshop-admin 로 선택하고, Apply 를 선택합니다.   "
 },
 {
-	"uri": "/tic-tac-toe/configure_task_definition/",
-	"title": "작업 정의 구성",
+	"uri": "/tic-tac-toe/configure_ecr/",
+	"title": "ECR 구성",
 	"tags": [],
 	"description": "",
-	"content": " 작업 정의 구성 총 4개의 작업 정의를 만들게 됩니다.\n2개는 EC2타입으로 2개는 FARGATE타입으로 만들어 보겠습니다.\n작업 정의는 개정(new revision)을 할때마다 뒤에 숫자가 올라가는데 리비전 값에 너무 신경쓰면서 이 문서의 리비전과 맞추지 않아도 됩니다.\n실수하신게 있으면 개정을 하시고 본인의 리비전을 잘 기억하시면 됩니다.\n"
+	"content": " ECR 구성 소스에는 총 4개의 프로젝트가 포함되어 있습니다.\n우리는 프로젝트마다 컨테이너로 묶어서 개별 리포지토리에 올리게 됩니다.\n"
 },
 {
 	"uri": "/prerequisites/workspaceiam/",
@@ -322,25 +322,25 @@
 	"content": "SSH키를 생성하기 위해 아래 명령어를 Cloud9에서 수행하세요. 이 키는 앞으로 ECS 클러스터 워커 노드에 접속할때 사용할 것입니다.\nssh-keygen  엔터를 3번 눌러서 명령어를 완료 하면 됩니다.\n 만든 퍼블릭 키를 EC2 리전에 업로드 합니다.:\naws ec2 import-key-pair --key-name \u0026quot;tic-tac-toe\u0026quot; --public-key-material file://~/.ssh/id_rsa.pub  "
 },
 {
-	"uri": "/tic-tac-toe/configure_cloudmap/",
-	"title": "클라우드맵 구성",
+	"uri": "/tic-tac-toe/configure_task_definition/",
+	"title": "작업 정의 구성",
 	"tags": [],
 	"description": "",
-	"content": " 클라우드맵 AWS 클라우드 맵은 완전 관리형 서비스 디스커버리 서비스 입니다.\n"
+	"content": " 작업 정의 구성 총 4개의 작업 정의를 만들게 됩니다.\n2개는 EC2타입으로 2개는 FARGATE타입으로 만들어 보겠습니다.\n작업 정의는 개정(new revision)을 할때마다 뒤에 숫자가 올라가는데 리비전 값에 너무 신경쓰면서 이 문서의 리비전과 맞추지 않아도 됩니다.\n실수하신게 있으면 개정을 하시고 본인의 리비전을 잘 기억하시면 됩니다.\n"
 },
 {
 	"uri": "/tic-tac-toe/configure_service/",
 	"title": "서비스 구성",
 	"tags": [],
 	"description": "",
-	"content": " 서비스 구성 이제 사전 준비 작업이 끝났습니다. ECS 서비스를 만들고 실제 게임과 대시보드를 띄워보겠습니다.\n"
+	"content": " 서비스 구성 이번 챕터에서는 앞서 만든 ALB와 작업 정의를 사용하여 ECS 서비스를 구성합니다.\n총 3개의 서비스를 만듭니다.\n"
 },
 {
 	"uri": "/tic-tac-toe/run_dedi_servers/",
 	"title": "데디 서버 운영 테스트",
 	"tags": [],
 	"description": "",
-	"content": " 서비스 테스트 이제 모든 환경을 구축했습니다.\n데디 서버를 준비시키고 돌아가는 상황을 모니터링 하겠습니다.\n"
+	"content": " 서비스 테스트 이제 모든 환경을 구축했습니다.\n데디 서버를 준비시키고 게임 서버들의 개수와 상태를 모니터링 하겠습니다.\n"
 },
 {
 	"uri": "/cleanup/",

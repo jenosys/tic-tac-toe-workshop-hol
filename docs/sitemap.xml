@@ -107,17 +107,17 @@
   </url>
   
   <url>
-    <loc>/tic-tac-toe/configure_ecr/</loc>
-    <lastmod>2018-08-07T08:30:11-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tic-tac-toe/configure_ecr/make_first_ecr/</loc>
     <lastmod>2018-08-07T08:30:11-07:00</lastmod>
   </url>
   
   <url>
     <loc>/tic-tac-toe/configure_cloudmap/make_cloudmap/</loc>
+    <lastmod>2018-08-07T08:30:11-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tic-tac-toe/configure_cloudmap/</loc>
     <lastmod>2018-08-07T08:30:11-07:00</lastmod>
   </url>
   
@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>/tic-tac-toe/configure_task_definition/</loc>
+    <loc>/tic-tac-toe/configure_ecr/</loc>
     <lastmod>2018-08-07T08:30:11-07:00</lastmod>
   </url>
   
@@ -213,7 +213,7 @@
   </url>
   
   <url>
-    <loc>/tic-tac-toe/configure_cloudmap/</loc>
+    <loc>/tic-tac-toe/configure_task_definition/</loc>
     <lastmod>2018-08-07T08:30:11-07:00</lastmod>
   </url>
   
