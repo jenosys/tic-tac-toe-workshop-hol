@@ -17,7 +17,7 @@ weight: 13
 **Add container**를 선택합니다.
 
 * **Container name**: tic-tac-toe-client
-* **Image**: tic-tac-toe-server 컨테이너 이미지 이름과 리비전을 넣습니다. 100280XXXXXX.dkr.ecr.us-west-2.amazonaws.com/tic-tac-toe-client:latest 의 형식입니다.
+* **Image**: tic-tac-toe-client 컨테이너 이미지 이름과 리비전을 넣습니다. 100280XXXXXX.dkr.ecr.us-west-2.amazonaws.com/tic-tac-toe-client:latest 의 형식입니다.
 * **Port mappings**: 80
 * **HELATHCHECK** 항목은 입력하지 않습니다.
 * **Log configuration**/**Auto-configure CloudWatch Logs**: 활성화

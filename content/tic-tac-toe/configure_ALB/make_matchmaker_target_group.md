@@ -9,8 +9,8 @@ weight: 3
 
  * **Target group name**: matchmaker
  * **Target type**: instance
- * **VPC**: tic-tac-toe-vpc
  * **Port**: 8888
+ * **VPC**: tic-tac-toe-vpc
  * **Health check settings**/**Path**: /api/health
  * 나머지 항목은 기본값으로 둡니다.
 ![Example Service](/images/tic-tac-toe/target_group-matchmaking-1.png)
