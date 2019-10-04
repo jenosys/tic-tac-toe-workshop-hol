@@ -18,7 +18,7 @@
       
       <guid>/tic-tac-toe/configure_service/make_service_dashboard/</guid>
       <description>대시보드 서비스는 daboard ALB와 FARGATE 작업을 연동한 웹서비스가 될 예정입니다.
-서비스 구성  ECS 서비스로 갑니다. 앞서 만든 tic-tac-toe-cluster를 선택합니다. 탭 메뉴에서 Services를 선택하고 Create를 선택합니다. 아래와 같이 입력합니다.   Launch type: FARGATE Task Definition: Family: dashboard, Revision: 1  실수 없이 잘 따라오셨다면 dashboard 작업 정의는 1개의 리비전을 가지고 있습니다. 중간에 개정을 하셨다면 가장 최신 리비전을 선택하시면 됩니다. 우리는 중간에 dashboard 컨테이너를 새로 묶어서 올린적이 있습니다. 컨테이너 리비전과 작업 정의 리비전은 다른것임을 염두하셔야 합니다.</description>
+서비스 구성  ECS 서비스로 갑니다. 앞서 만든 tic-tac-toe-cluster를 선택합니다. 탭 메뉴에서 Services를 선택하고 Create를 선택합니다. 아래와 같이 입력합니다.   Launch type: FARGATE Task Definition: Family: dashboard, Revision: 1  실수 없이 잘 따라오셨다면 dashboard 작업 정의는 1개의 리비전을 가지고 있습니다. 중간에 개정을 하셨다면 가장 최신 리비전을 선택하시면 됩니다. 우리는 중간에 dashboard 컨테이너를 새로 묶어서 올린적이 있습니다. 이미지 태그와 작업 정의 리비전은 다른것임을 염두하셔야 합니다.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
 서비스 구성  Launch type: FARGATE Task Definition: Family: tic-tac-toe-client, Revision: 1 Service name: tic-tac-toe-client Number of tasks: 2  다른 옵션은 기본값을 사용합니다.
 Next step 을 선택합니다.
 네트워크 구성 아래와 같이 입력합니다.
- Cluster VPC: tic-tac-toe-vpc Subnets: 선택 가능한 2개의 서브넷 모두 선택 Security groups  Edit 선택 Select existing security group 선택 WebServer-SG 선택  Auto-assign public IP ENABLED Load balancer type: Application Load Balancer Service IAM role: 대시보드 서비스를 만들때 자동 생성한 IAM 역할이 있습니다.</description>
+ Cluster VPC: tic-tac-toe-vpc Subnets: 선택 가능한 2개의 서브넷 모두 선택 Security groups  Edit 선택 Select existing security group 선택 WebServer-SG 선택  Auto-assign public IP ENABLED Load balancer type: Application Load Balancer  Load balancer name: tic-tac-toe-client-ALB Container to load balance/Add to load balancer 선택 Production listener port: 80:HTTP 선택 Target group name: tic-tac-toe-client 선택 Enable service discovery integration: 선택 해체  Next step 선택</description>
     </item>
     
     <item>
