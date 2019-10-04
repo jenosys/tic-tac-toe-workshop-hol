@@ -38,7 +38,7 @@ weight: 3
  1. WebServer-SG 선택
 * **Auto-assign public IP** ENABLED
 * **Load balancer type**: Application Load Balancer
-* **Service IAM role**: 대시보드 서비스를 만들때 자동 생성한 IAM 역할이 있습니다. 이것을 선택합니다.
+* **Service IAM role**: 대시보드 서비스를 만들때 자동 생성된 IAM 역할이 있습니다. AWSServiceRoleForECS 선택합니다.
 * **Load balancer name**: matchmaker-ALB
 * **Container to load balance**/**Add to load balancer** 선택
 * **Production listener port**: matchmaker:0:8888 을 로드밸런서에 추가(Add to load balancer)

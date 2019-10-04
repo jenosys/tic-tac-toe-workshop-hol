@@ -27,7 +27,8 @@ c9 .env.production
 API_URL이 matchmaker-ALB 주소이고, CLIENT_URL 이 tic-tac-toe-client-ALB 주소 입니다.
 
 {{% notice info %}}
-주소의 시작부분에 http://가 빠지지 않도록 주의하세요.
+주소의 시작부분에 http://가 빠지지 않도록 주의하세요.<br>
+수정이 끝나고 꼭 저장하도록 합니다.
 {{% /notice %}}
 {{% notice warning %}}
 주소를 잘 넣었는지 확인하시기 바랍니다. 이곳에 정확한 주소를 넣지 않으면 이후에 데모가 제대로 돌아가지 않게 됩니다. 반대로 이후 데모에서 페이지를 찾을 수 없다는 에러가 난다면 이곳을 확인해보시길 바랍니다.

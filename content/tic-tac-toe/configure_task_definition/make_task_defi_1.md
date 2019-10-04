@@ -21,7 +21,7 @@ weight: 11
 **Add container**를 선택합니다. 컨테이너 정보를 입력하는 모달창이 뜨는데 여기에 아래 내용을 입력합니다.
 
 * **Container name**: matchmaker
-* **Image**: matchmaker 컨테이너 이미지 이름과 리비전을 넣습니다. 100280XXXXXX.dkr.ecr.us-west-2.amazonaws.com/matchmaker:latest 의 형식입니다.
+* **Image**: matchmaker 컨테이너 이미지 이름과 태그를 넣습니다. 100280XXXXXX.dkr.ecr.us-west-2.amazonaws.com/matchmaker:latest 의 형식입니다.
 * **Port mappings**항목에서 Host는 0, Container Port는 8888을 입력합니다.
 
 ![Example Service](/images/tic-tac-toe/task-definition-matchmaker-2.png)

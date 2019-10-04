@@ -18,7 +18,7 @@ weight: 1
 
 
 {{% notice info %}}
-실수 없이 잘 따라오셨다면 dashboard 작업 정의는 1개의 리비전을 가지고 있습니다. 중간에 개정을 하셨다면 가장 최신 리비전을 선택하시면 됩니다. 우리는 중간에 dashboard 컨테이너를 새로 묶어서 올린적이 있습니다. 컨테이너 리비전과 작업 정의 리비전은 다른것임을 염두하셔야 합니다. 
+실수 없이 잘 따라오셨다면 dashboard 작업 정의는 1개의 리비전을 가지고 있습니다. 중간에 개정을 하셨다면 가장 최신 리비전을 선택하시면 됩니다. 우리는 중간에 dashboard 컨테이너를 새로 묶어서 올린적이 있습니다. 이미지 태그와 작업 정의 리비전은 다른것임을 염두하셔야 합니다. 
 {{% /notice %}}
 
 * **Service name**: dashboard
@@ -42,7 +42,7 @@ weight: 1
  1. WebServer-SG 선택
 * **Auto-assign public IP** ENABLED
 * **Load balancer type**: Application Load Balancer
-* **Service IAM role**: Create new role
+<!-- * **Service IAM role**: Create new role -->
 * **Load balancer name**: dashboard-ALB
 * **Container to load balance**/**Add to load balancer** 선택
 * **Production listener port**: 80:HTTP 선택

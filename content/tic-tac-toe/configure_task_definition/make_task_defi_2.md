@@ -18,7 +18,7 @@ weight: 12
 **Add container**를 선택합니다.
 
 * **Container name**: tic-tac-toe-server
-* **Image**: tic-tac-toe-server 컨테이너 이미지 이름과 리비전을 넣습니다. 100280XXXXXX.dkr.ecr.us-west-2.amazonaws.com/tic-tac-toe-server:latest 의 형식입니다.
+* **Image**: tic-tac-toe-server 컨테이너 이미지 이름과 태그를 넣습니다. 100280XXXXXX.dkr.ecr.us-west-2.amazonaws.com/tic-tac-toe-server:latest 의 형식입니다.
 * **Port mappings**항목에서 Host는 0, Container Port는 3553을 입력합니다.
 * **HELATHCHECK** 항목은 입력하지 않습니다.
 * **ENVIRONMENT** 항목에서 컨테이너에게 넘길 환경변수를 설정합니다.
