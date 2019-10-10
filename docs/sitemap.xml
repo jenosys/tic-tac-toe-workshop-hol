@@ -28,7 +28,7 @@
   </url>
   
   <url>
-    <loc>/prerequisites/account/</loc>
+    <loc>/prerequisites/self_paced/account/</loc>
   </url>
   
   <url>
@@ -122,10 +122,6 @@
   </url>
   
   <url>
-    <loc>/prerequisites/workspace/</loc>
-  </url>
-  
-  <url>
     <loc>/prerequisites/</loc>
   </url>
   
@@ -145,6 +141,10 @@
   </url>
   
   <url>
+    <loc>/prerequisites/self_paced/</loc>
+  </url>
+  
+  <url>
     <loc>/tic-tac-toe/configure_task_definition/make_task_defi_2/</loc>
     <lastmod>2018-08-07T08:30:11-07:00</lastmod>
   </url>
@@ -155,6 +155,10 @@
   </url>
   
   <url>
+    <loc>/prerequisites/aws_event/</loc>
+  </url>
+  
+  <url>
     <loc>/tic-tac-toe/configure_task_definition/make_task_defi_3/</loc>
     <lastmod>2018-08-07T08:30:11-07:00</lastmod>
   </url>
@@ -162,6 +166,10 @@
   <url>
     <loc>/tic-tac-toe/configure_task_definition/make_task_defi_4/</loc>
     <lastmod>2018-08-07T08:30:11-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/prerequisites/workspace/</loc>
   </url>
   
   <url>
@@ -177,6 +185,10 @@
   <url>
     <loc>/tic-tac-toe/configure_ecr/container_detail/</loc>
     <lastmod>2018-08-07T08:30:11-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/prerequisites/aws_event/portal/</loc>
   </url>
   
   <url>

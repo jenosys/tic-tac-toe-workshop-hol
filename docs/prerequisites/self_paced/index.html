@@ -12,27 +12,27 @@
     <meta name="description" content="ECS HoL">
 <meta name="author" content="Brent Langston">
 
-    <link rel="shortcut icon" href="../../../images/favicon.ico" type="image/x-icon" />
-<link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
 
-    <title>게임 클라이언트 작업 정의 :: ECS HoL</title>
+    <title>...개인 계정으로 진행 :: ECS HoL</title>
 
     
-    <link href="../../../css/nucleus.css?1570698978" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1570698978" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1570698978" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1570698978" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1570698978" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1570698978" rel="stylesheet">
-    <link href="../../../css/theme.css?1570698978" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1570698978" rel="stylesheet">
-    <link href="../../../css/jquery-ui.min.css?1570698978" rel="stylesheet">
+    <link href="../../css/nucleus.css?1570698978" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1570698978" rel="stylesheet">
+    <link href="../../css/hybrid.css?1570698978" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1570698978" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1570698978" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1570698978" rel="stylesheet">
+    <link href="../../css/theme.css?1570698978" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1570698978" rel="stylesheet">
+    <link href="../../css/jquery-ui.min.css?1570698978" rel="stylesheet">
     
-      <link href="../../../css/theme-mine.css?1570698978" rel="stylesheet">
+      <link href="../../css/theme-mine.css?1570698978" rel="stylesheet">
     
 
-    <script src="../../../js/jquery-3.3.1.min.js?1570698978"></script>
-    <script src="../../../js/jquery-ui-1.12.1.min.js?1570698978"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1570698978"></script>
+    <script src="../../js/jquery-ui-1.12.1.min.js?1570698978"></script>
 
 
     <style type="text/css">
@@ -47,14 +47,14 @@
     </style>
     
   </head>
-  <body class="" data-url="/tic-tac-toe/configure_task_definition/make_task_defi_3/">
+  <body class="" data-url="/prerequisites/self_paced/">
     <nav id="sidebar" class="">
 
 
 
   <div id="header-wrapper">
     <div id="header">
-      <a href="../../../" title="Go home"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" width="60%" style="padding:20px 0px;"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg></a>
+      <a href="../../" title="Go home"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" width="60%" style="padding:20px 0px;"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg></a>
 
     </div>
     
@@ -64,14 +64,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../../js/lunr.min.js?1570698978"></script>
-<script type="text/javascript" src="../../../js/auto-complete.js?1570698978"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1570698978"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1570698978"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../../js/search.js?1570698978"></script>
+<script type="text/javascript" src="../../js/search.js?1570698978"></script>
 
     
   </div>
@@ -88,11 +88,11 @@
   
     
     <li data-nav-id="/prerequisites/" title="워크샵 시작하기" class="dd-item 
-        
+        parent
         
         
         ">
-      <a href="../../../prerequisites/">
+      <a href="../../prerequisites/">
           워크샵 시작하기
           
       </a>
@@ -115,11 +115,11 @@
   
     
     <li data-nav-id="/prerequisites/self_paced/" title="...개인 계정으로 진행" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
-      <a href="../../../prerequisites/self_paced/">
+      <a href="../../prerequisites/self_paced/">
           ...개인 계정으로 진행
           
       </a>
@@ -140,7 +140,7 @@
   
     
       <li data-nav-id="/prerequisites/self_paced/account/" title="AWS 계정 생성" class="dd-item ">
-        <a href="../../../prerequisites/self_paced/account/">
+        <a href="../../prerequisites/self_paced/account/">
         AWS 계정 생성
         
         </a>
@@ -172,7 +172,7 @@
         
         
         ">
-      <a href="../../../prerequisites/aws_event/">
+      <a href="../../prerequisites/aws_event/">
           ...이벤트 계정으로 진행
           
       </a>
@@ -193,7 +193,7 @@
   
     
       <li data-nav-id="/prerequisites/aws_event/portal/" title="AWS 워크샵 포털" class="dd-item ">
-        <a href="../../../prerequisites/aws_event/portal/">
+        <a href="../../prerequisites/aws_event/portal/">
         AWS 워크샵 포털
         
         </a>
@@ -221,7 +221,7 @@
   
     
       <li data-nav-id="/prerequisites/workspace/" title="워크샵 생성" class="dd-item ">
-        <a href="../../../prerequisites/workspace/">
+        <a href="../../prerequisites/workspace/">
         워크샵 생성
         
         </a>
@@ -240,7 +240,7 @@
   
     
       <li data-nav-id="/prerequisites/installtools/" title="필요한 툴 설치하기" class="dd-item ">
-        <a href="../../../prerequisites/installtools/">
+        <a href="../../prerequisites/installtools/">
         필요한 툴 설치하기
         
         </a>
@@ -259,7 +259,7 @@
   
     
       <li data-nav-id="/prerequisites/iamrole/" title="워크샵을 위한 IAM 역할 만들기" class="dd-item ">
-        <a href="../../../prerequisites/iamrole/">
+        <a href="../../prerequisites/iamrole/">
         워크샵을 위한 IAM 역할 만들기
         
         </a>
@@ -278,7 +278,7 @@
   
     
       <li data-nav-id="/prerequisites/ec2instance/" title="워크샵에 IAM 역할 연결하기" class="dd-item ">
-        <a href="../../../prerequisites/ec2instance/">
+        <a href="../../prerequisites/ec2instance/">
         워크샵에 IAM 역할 연결하기
         
         </a>
@@ -297,7 +297,7 @@
   
     
       <li data-nav-id="/prerequisites/workspaceiam/" title="IAM 셋팅 업데이트" class="dd-item ">
-        <a href="../../../prerequisites/workspaceiam/">
+        <a href="../../prerequisites/workspaceiam/">
         IAM 셋팅 업데이트
         
         </a>
@@ -316,7 +316,7 @@
   
     
       <li data-nav-id="/prerequisites/sshkey/" title="SSH 키 생성하기" class="dd-item ">
-        <a href="../../../prerequisites/sshkey/">
+        <a href="../../prerequisites/sshkey/">
         SSH 키 생성하기
         
         </a>
@@ -354,11 +354,11 @@
   
     
     <li data-nav-id="/tic-tac-toe/" title="서비스 구성" class="dd-item 
-        parent
+        
         
         
         ">
-      <a href="../../../tic-tac-toe/">
+      <a href="../../tic-tac-toe/">
           서비스 구성
           
       </a>
@@ -385,7 +385,7 @@
         
         
         ">
-      <a href="../../../tic-tac-toe/build_cluster/">
+      <a href="../../tic-tac-toe/build_cluster/">
           ECS 클러스터 생성
           
       </a>
@@ -406,7 +406,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/build_cluster/iamrole/" title="ECS EC2를 위한 IAM 역할 만들기" class="dd-item ">
-        <a href="../../../tic-tac-toe/build_cluster/iamrole/">
+        <a href="../../tic-tac-toe/build_cluster/iamrole/">
         ECS EC2를 위한 IAM 역할 만들기
         
         </a>
@@ -425,7 +425,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/build_cluster/build_cluster/" title="ECS 클러스터 생성하기" class="dd-item ">
-        <a href="../../../tic-tac-toe/build_cluster/build_cluster/">
+        <a href="../../tic-tac-toe/build_cluster/build_cluster/">
         ECS 클러스터 생성하기
         
         </a>
@@ -444,7 +444,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/build_cluster/edit_sg/" title="보안그룹 수정" class="dd-item ">
-        <a href="../../../tic-tac-toe/build_cluster/edit_sg/">
+        <a href="../../tic-tac-toe/build_cluster/edit_sg/">
         보안그룹 수정
         
         </a>
@@ -476,7 +476,7 @@
         
         
         ">
-      <a href="../../../tic-tac-toe/configure_cloudmap/">
+      <a href="../../tic-tac-toe/configure_cloudmap/">
           클라우드맵 구성
           
       </a>
@@ -497,7 +497,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_cloudmap/make_cloudmap/" title="클라우드 맵 만들기" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_cloudmap/make_cloudmap/">
+        <a href="../../tic-tac-toe/configure_cloudmap/make_cloudmap/">
         클라우드 맵 만들기
         
         </a>
@@ -529,7 +529,7 @@
         
         
         ">
-      <a href="../../../tic-tac-toe/configure_alb/">
+      <a href="../../tic-tac-toe/configure_alb/">
           ALB 구성
           
       </a>
@@ -550,7 +550,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_alb/check_vpc/" title="VPC 이름 변경" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_alb/check_vpc/">
+        <a href="../../tic-tac-toe/configure_alb/check_vpc/">
         VPC 이름 변경
         
         </a>
@@ -569,7 +569,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_alb/make_matchmaker_target_group/" title="매치메이커 타겟 그룹 만들기" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_alb/make_matchmaker_target_group/">
+        <a href="../../tic-tac-toe/configure_alb/make_matchmaker_target_group/">
         매치메이커 타겟 그룹 만들기
         
         </a>
@@ -588,7 +588,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_alb/make_other_target_groups/" title="대시보드 타겟 그룹 만들기" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_alb/make_other_target_groups/">
+        <a href="../../tic-tac-toe/configure_alb/make_other_target_groups/">
         대시보드 타겟 그룹 만들기
         
         </a>
@@ -607,7 +607,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_alb/make_albs/" title="ALB 만들기" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_alb/make_albs/">
+        <a href="../../tic-tac-toe/configure_alb/make_albs/">
         ALB 만들기
         
         </a>
@@ -639,7 +639,7 @@
         
         
         ">
-      <a href="../../../tic-tac-toe/configure_ecr/">
+      <a href="../../tic-tac-toe/configure_ecr/">
           ECR 구성
           
       </a>
@@ -660,7 +660,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_ecr/clone_source/" title="소스코드 복제" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_ecr/clone_source/">
+        <a href="../../tic-tac-toe/configure_ecr/clone_source/">
         소스코드 복제
         
         </a>
@@ -679,7 +679,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_ecr/make_first_ecr/" title="첫번째 리포지토리 만들기" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_ecr/make_first_ecr/">
+        <a href="../../tic-tac-toe/configure_ecr/make_first_ecr/">
         첫번째 리포지토리 만들기
         
         </a>
@@ -698,7 +698,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_ecr/make_others_ecr/" title="나머지 리포지토리 만들기" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_ecr/make_others_ecr/">
+        <a href="../../tic-tac-toe/configure_ecr/make_others_ecr/">
         나머지 리포지토리 만들기
         
         </a>
@@ -717,7 +717,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_ecr/make_containers_and_push/" title="컨테이너로 묶어서 올리기" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_ecr/make_containers_and_push/">
+        <a href="../../tic-tac-toe/configure_ecr/make_containers_and_push/">
         컨테이너로 묶어서 올리기
         
         </a>
@@ -736,7 +736,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_ecr/container_detail/" title="프로젝트 알아보기" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_ecr/container_detail/">
+        <a href="../../tic-tac-toe/configure_ecr/container_detail/">
         프로젝트 알아보기
         
         </a>
@@ -764,11 +764,11 @@
   
     
     <li data-nav-id="/tic-tac-toe/configure_task_definition/" title="작업 정의 구성" class="dd-item 
-        parent
+        
         
         
         ">
-      <a href="../../../tic-tac-toe/configure_task_definition/">
+      <a href="../../tic-tac-toe/configure_task_definition/">
           작업 정의 구성
           
       </a>
@@ -789,7 +789,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_task_definition/iamrole/" title="ECS 작업을 위한 IAM 역할 만들기" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_task_definition/iamrole/">
+        <a href="../../tic-tac-toe/configure_task_definition/iamrole/">
         ECS 작업을 위한 IAM 역할 만들기
         
         </a>
@@ -808,7 +808,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_task_definition/make_task_defi_1/" title="매치 메이커 작업 정의" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_task_definition/make_task_defi_1/">
+        <a href="../../tic-tac-toe/configure_task_definition/make_task_defi_1/">
         매치 메이커 작업 정의
         
         </a>
@@ -827,7 +827,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_task_definition/make_task_defi_2/" title="게임 서버 작업 정의" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_task_definition/make_task_defi_2/">
+        <a href="../../tic-tac-toe/configure_task_definition/make_task_defi_2/">
         게임 서버 작업 정의
         
         </a>
@@ -845,8 +845,8 @@
  
   
     
-      <li data-nav-id="/tic-tac-toe/configure_task_definition/make_task_defi_3/" title="게임 클라이언트 작업 정의" class="dd-item active">
-        <a href="../../../tic-tac-toe/configure_task_definition/make_task_defi_3/">
+      <li data-nav-id="/tic-tac-toe/configure_task_definition/make_task_defi_3/" title="게임 클라이언트 작업 정의" class="dd-item ">
+        <a href="../../tic-tac-toe/configure_task_definition/make_task_defi_3/">
         게임 클라이언트 작업 정의
         
         </a>
@@ -865,7 +865,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_task_definition/make_task_defi_4/" title="대시보드 작업 정의" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_task_definition/make_task_defi_4/">
+        <a href="../../tic-tac-toe/configure_task_definition/make_task_defi_4/">
         대시보드 작업 정의
         
         </a>
@@ -884,7 +884,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_task_definition/rebuild_dashboard/" title="대시보드 컨테이너 업데이트" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_task_definition/rebuild_dashboard/">
+        <a href="../../tic-tac-toe/configure_task_definition/rebuild_dashboard/">
         대시보드 컨테이너 업데이트
         
         </a>
@@ -916,7 +916,7 @@
         
         
         ">
-      <a href="../../../tic-tac-toe/configure_service/">
+      <a href="../../tic-tac-toe/configure_service/">
           서비스 구성
           
       </a>
@@ -937,7 +937,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_service/make_service_dashboard/" title="대시보드 서비스 만들기" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_service/make_service_dashboard/">
+        <a href="../../tic-tac-toe/configure_service/make_service_dashboard/">
         대시보드 서비스 만들기
         
         </a>
@@ -956,7 +956,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_service/make_service_client/" title="클라이언트 서비스 만들기" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_service/make_service_client/">
+        <a href="../../tic-tac-toe/configure_service/make_service_client/">
         클라이언트 서비스 만들기
         
         </a>
@@ -975,7 +975,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_service/make_service_matchmaker/" title="매치메이커 서비스 만들기" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_service/make_service_matchmaker/">
+        <a href="../../tic-tac-toe/configure_service/make_service_matchmaker/">
         매치메이커 서비스 만들기
         
         </a>
@@ -994,7 +994,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/configure_service/make_service_done/" title="서비스 확인" class="dd-item ">
-        <a href="../../../tic-tac-toe/configure_service/make_service_done/">
+        <a href="../../tic-tac-toe/configure_service/make_service_done/">
         서비스 확인
         
         </a>
@@ -1026,7 +1026,7 @@
         
         
         ">
-      <a href="../../../tic-tac-toe/run_dedi_servers/">
+      <a href="../../tic-tac-toe/run_dedi_servers/">
           데디 서버 운영 테스트
           
       </a>
@@ -1047,7 +1047,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/run_dedi_servers/run_task/" title="서버 준비 하기" class="dd-item ">
-        <a href="../../../tic-tac-toe/run_dedi_servers/run_task/">
+        <a href="../../tic-tac-toe/run_dedi_servers/run_task/">
         서버 준비 하기
         
         </a>
@@ -1066,7 +1066,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/run_dedi_servers/run_fargate/" title="게임 서버를 파게이트로 띄우기" class="dd-item ">
-        <a href="../../../tic-tac-toe/run_dedi_servers/run_fargate/">
+        <a href="../../tic-tac-toe/run_dedi_servers/run_fargate/">
         게임 서버를 파게이트로 띄우기
         
         </a>
@@ -1085,7 +1085,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/run_dedi_servers/run_game/" title="게임 실행 하기" class="dd-item ">
-        <a href="../../../tic-tac-toe/run_dedi_servers/run_game/">
+        <a href="../../tic-tac-toe/run_dedi_servers/run_game/">
         게임 실행 하기
         
         </a>
@@ -1104,7 +1104,7 @@
   
     
       <li data-nav-id="/tic-tac-toe/run_dedi_servers/end_workshop/" title="개선 사항" class="dd-item ">
-        <a href="../../../tic-tac-toe/run_dedi_servers/end_workshop/">
+        <a href="../../tic-tac-toe/run_dedi_servers/end_workshop/">
         개선 사항
         
         </a>
@@ -1143,7 +1143,7 @@
         
         
         ">
-      <a href="../../../cleanup/">
+      <a href="../../cleanup/">
           클린 업
           
       </a>
@@ -1164,7 +1164,7 @@
   
     
       <li data-nav-id="/cleanup/delete_cluster/" title="ECS 클러스터 삭제" class="dd-item ">
-        <a href="../../../cleanup/delete_cluster/">
+        <a href="../../cleanup/delete_cluster/">
         ECS 클러스터 삭제
         
         </a>
@@ -1183,7 +1183,7 @@
   
     
       <li data-nav-id="/cleanup/delete_ec2/" title="EC2 삭제" class="dd-item ">
-        <a href="../../../cleanup/delete_ec2/">
+        <a href="../../cleanup/delete_ec2/">
         EC2 삭제
         
         </a>
@@ -1202,7 +1202,7 @@
   
     
       <li data-nav-id="/cleanup/delete_cloudmap/" title="클라우드 맵 삭제" class="dd-item ">
-        <a href="../../../cleanup/delete_cloudmap/">
+        <a href="../../cleanup/delete_cloudmap/">
         클라우드 맵 삭제
         
         </a>
@@ -1221,7 +1221,7 @@
   
     
       <li data-nav-id="/cleanup/delete_alb/" title="ALB 삭제" class="dd-item ">
-        <a href="../../../cleanup/delete_alb/">
+        <a href="../../cleanup/delete_alb/">
         ALB 삭제
         
         </a>
@@ -1240,7 +1240,7 @@
   
     
       <li data-nav-id="/cleanup/delete_workspace/" title="워크스페이스 삭제" class="dd-item ">
-        <a href="../../../cleanup/delete_workspace/">
+        <a href="../../cleanup/delete_workspace/">
         워크스페이스 삭제
         
         </a>
@@ -1304,8 +1304,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                     
           
@@ -1318,13 +1316,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='../../../'>Games On AWS</a> > <a href='../../../tic-tac-toe/'>서비스 구성</a> > <a href='../../../tic-tac-toe/configure_task_definition/'>작업 정의 구성</a> > 게임 클라이언트 작업 정의
-          
-         
+            <a href='../../'>Games On AWS</a> > <a href='../../prerequisites/'>워크샵 시작하기</a> > ...개인 계정으로 진행
           
          
           
@@ -1334,58 +1326,79 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-
-    </div>
-</div>
-
-                
               </div>
             </div>
             
 
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>게임 클라이언트 작업 정의</h1>
           
 
         
 
 
-<p>세번째 작업 정의는 tic-tac-toe-client 를 만듭니다.
-이 작업은 간단한 웹 호스팅으로 FARGATE타입으로 생성하겠습니다.</p>
 
-<ul>
-<li><strong>launch type</strong>: FARGATE</li>
-<li><strong>Task Definition Name</strong>: tic-tac-toe-client</li>
-<li><strong>Task Role</strong>: tic-tac-toe-task-role</li>
-<li><strong>Task execution role</strong>: tic-tac-toe-task-role</li>
-<li><strong>Task memory</strong>: 0.5GB</li>
-<li><strong>Task CPU</strong>: 0.25 vCPU</li>
+	
+
+<h3 id="개인-계정으로-진행하기">개인 계정으로 진행하기</h3>
+
+
+<div class="notices warning" ><p>개인 계정으로 이 워크샵을 진행할때만 이 섹션을 진행해 주십시오. 만약 AWS 행사 (게임즈 온 AWS)에 참여중이라면, <a href="../aws_event/">이벤트 계정으로 진행하기</a> 를 하시기 바랍니다.</p>
+</div>
+
+
+
+
+
+
+
+
+
+<ul class="children children-li">
+	
+
+	
+		
+	
+
+	
+
+	
+		
+	
+		
+			
+				
+<li>
+<a href="../../prerequisites/self_paced/account/" >AWS 계정 생성</a>
+</li>
+				
+
+				
+			
+			
+		
+	
+
+	
 </ul>
 
-<p><strong>Add container</strong>를 선택합니다.</p>
 
-<ul>
-<li><strong>Container name</strong>: tic-tac-toe-client</li>
-<li><strong>Image</strong>: tic-tac-toe-client 컨테이너 이미지 이름과 태그를 넣습니다. 100280XXXXXX.dkr.ecr.us-west-2.amazonaws.com/tic-tac-toe-client:latest 의 형식입니다.</li>
-<li><strong>Port mappings</strong>: 80</li>
-<li><strong>HELATHCHECK</strong> 항목은 입력하지 않습니다.</li>
-<li><strong>Log configuration</strong>/<strong>Auto-configure CloudWatch Logs</strong>: 활성화</li>
-</ul>
 
-<p><strong>Add</strong>를 선택합니다. 이미 한번 적용했다면 버튼 이름은 <strong>Update</strong>로 변경됩니다.</p>
 
-<p><strong>Create</strong> 를 선택해서 작업을 만듭니다.</p>
+
+
+
 
 
 <footer class=" footline" >
 	
 </footer>
 
-
+        
+            </div> 
         
         </div>
         
@@ -1417,8 +1430,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1435,6 +1446,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1447,6 +1459,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1618,7 +1633,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1633,9 +1647,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1708,86 +1719,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1885,22 +1816,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1909,7 +1824,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1922,9 +1836,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1974,6 +1885,53 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1991,8 +1949,53 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2290,10 +2293,10 @@
 
 
         
-            <a class="nav nav-prev" href="../../../tic-tac-toe/configure_task_definition/make_task_defi_2/" title="게임 서버 작업 정의"> <i class="fas fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="../../prerequisites/" title="워크샵 시작하기"> <i class="fas fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="../../../tic-tac-toe/configure_task_definition/make_task_defi_4/" title="대시보드 작업 정의" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="../../prerequisites/self_paced/account/" title="AWS 계정 생성" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
         
     </div>
 
@@ -2302,20 +2305,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1570698978"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1570698978"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1570698978"></script>
-    <script src="../../../js/jquery.sticky.js?1570698978"></script>
-    <script src="../../../js/featherlight.min.js?1570698978"></script>
-    <script src="../../../js/html5shiv-printshiv.min.js?1570698978"></script>
-    <script src="../../../js/highlight.pack.js?1570698978"></script>
+    <script src="../../js/clipboard.min.js?1570698978"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1570698978"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1570698978"></script>
+    <script src="../../js/jquery.sticky.js?1570698978"></script>
+    <script src="../../js/featherlight.min.js?1570698978"></script>
+    <script src="../../js/html5shiv-printshiv.min.js?1570698978"></script>
+    <script src="../../js/highlight.pack.js?1570698978"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom-3.6.0.js?1570698978"></script>
-    <script src="../../../js/learn.js?1570698978"></script>
-    <script src="../../../js/hugo-learn.js?1570698978"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1570698978"></script>
+    <script src="../../js/learn.js?1570698978"></script>
+    <script src="../../js/hugo-learn.js?1570698978"></script>
 
-    <link href="../../../mermaid/mermaid.css?1570698978" type="text/css" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.min.js?1570698978"></script>
+    <link href="../../mermaid/mermaid.css?1570698978" type="text/css" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.min.js?1570698978"></script>
     <script>
 	var config = {
         startOnLoad:true,
@@ -2329,4 +2332,3 @@
 
   </body>
 </html>
-

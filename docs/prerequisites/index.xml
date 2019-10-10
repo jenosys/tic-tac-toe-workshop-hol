@@ -11,17 +11,6 @@
     
     
     <item>
-      <title>AWS 계정 생성</title>
-      <link>/prerequisites/account/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/prerequisites/account/</guid>
-      <description> 여러분의 계정은 새로운 IAM 역할(role)을 만들거나 다른 퍼미션(permission)을 만들 수 있는 권한이 있어야 합니다.
-  관리자 권한이 있는 AWS 계정이 없다면: 계정생성 바로가기 AWS 계정을 가지고 있다면, 다음 링크를 눌러 관리자 권한이 있는 새로운 IAM 유저를 만듭니다. 워크샵용 IAM 유저 생성 바로가기
- 사용자 내용을 적습니다:  AdministratorAccess IAM 정책을 추가합니다.:  Create user를 선택합니다.:  로그인 URL을 적어놓고 저장합니다.:   </description>
-    </item>
-    
-    <item>
       <title>워크샵 생성</title>
       <link>/prerequisites/workspace/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

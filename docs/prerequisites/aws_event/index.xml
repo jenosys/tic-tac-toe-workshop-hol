@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>...이벤트 계정으로 진행 on ECS HoL</title>
+    <link>/prerequisites/aws_event/</link>
+    <description>Recent content in ...이벤트 계정으로 진행 on ECS HoL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    
+	<atom:link href="/prerequisites/aws_event/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS 워크샵 포털</title>
+      <link>/prerequisites/aws_event/portal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/prerequisites/aws_event/portal/</guid>
+      <description>AWS 워크샵 포털에 로그인 여러분은 참석자 해시가 필요합니다. 해시코드는 스텝이 제공해 드립니다.
+다음 링크를 통해 포털에 접속하시거나 브라우저 주소창에 입력해주세요. https://dashboard.eventengine.run/.
+ 워크샵 포털에 접속하면 아래와 같은 화면이 나옵니다.  텍스트 입력창에 전달받은 해시 코드를 입력하고 Proceed 를 선택합니다.  이벤트에 맞는 해시코드를 제대로 입력하면 화면이 바뀝니다. Open Console을 선택하여 AWS 콘솔로 접속합니다.   위 과정을 완료하셨으면 워크샵 생성을 진행하시면 됩니다.</description>
+    </item>
+    
+  </channel>
+</rss>
