@@ -1,7 +1,7 @@
 ---
 title: "워크샵 생성"
 chapter: false
-weight: 10
+weight: 14
 ---
 
 {{% notice warning %}}
