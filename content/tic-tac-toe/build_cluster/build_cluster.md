@@ -22,6 +22,7 @@ weight: 2
 1. **Networking**항목 아래 내용으로 입력합니다.
  * **VPC**: Create VPC 선택
  * **Container instance IAM role**: tic-tac-toe-ecs-role 선택
+ * 하단의 **CloudWatch Container Insights** 항목 선택 확인
  * 기타 항목은 기본값으로 둡니다.
 1. 하단의 **Create**를 선택하여 다음으로 넘어갑니다.
 ![Example Service](/images/tic-tac-toe/cluster-build-3.png)

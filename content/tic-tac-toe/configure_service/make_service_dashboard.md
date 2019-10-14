@@ -42,11 +42,11 @@ weight: 1
  1. WebServer-SG 선택
 * **Auto-assign public IP** ENABLED
 * **Load balancer type**: Application Load Balancer
-<!-- * **Service IAM role**: Create new role -->
 * **Load balancer name**: dashboard-ALB
-* **Container to load balance**/**Add to load balancer** 선택
-* **Production listener port**: 80:HTTP 선택
-* **Target group name**: dashboard
+* **Container to load balance**
+   * **Container name : port** dashboard:80:80을 선택하고 **Add to load balancer** 선택
+   * **Production listener port**: 80:HTTP 선택
+   * **Target group name**: dashboard 선택
 * **Enable service discovery integration**: 선택 해제
 ![Example Service](/images/tic-tac-toe/service-dashbard-2.png)
 

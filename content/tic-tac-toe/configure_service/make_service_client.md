@@ -31,11 +31,11 @@ weight: 2
  1. WebServer-SG 선택
 * **Auto-assign public IP** ENABLED
 * **Load balancer type**: Application Load Balancer
-<!-- * **Service IAM role**: 대시보드 서비스를 만들때 자동 생성한 IAM 역할이 있습니다. AWSServiceRoleForECS 선택합니다. -->
 * **Load balancer name**: tic-tac-toe-client-ALB
-* **Container to load balance**/**Add to load balancer** 선택
-* **Production listener port**: 80:HTTP 선택
-* **Target group name**: tic-tac-toe-client 선택
+* **Container to load balance**
+   * **Container name : port** tic-tac-toe-client:80:80을 선택하고 **Add to load balancer** 선택
+   * **Production listener port**: 80:HTTP 선택
+   * **Target group name**: tic-tac-toe-client 선택
 * **Enable service discovery integration**: 선택 해체
 
 **Next step** 선택

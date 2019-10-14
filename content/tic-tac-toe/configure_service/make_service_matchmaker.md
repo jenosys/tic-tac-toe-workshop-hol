@@ -30,19 +30,20 @@ weight: 3
 
 아래와 같이 입력합니다.
 
-* **Cluster VPC**: tic-tac-toe-vpc
+<!-- * **Cluster VPC**: tic-tac-toe-vpc
 * **Subnets**: 선택 가능한 2개의 서브넷 모두 선택
 * **Security groups**
  1. **Edit** 선택
  1. **Select existing security group** 선택
  1. WebServer-SG 선택
-* **Auto-assign public IP** ENABLED
+* **Auto-assign public IP** ENABLED -->
 * **Load balancer type**: Application Load Balancer
 * **Service IAM role**: 대시보드 서비스를 만들때 자동 생성된 IAM 역할이 있습니다. AWSServiceRoleForECS 선택합니다.
 * **Load balancer name**: matchmaker-ALB
-* **Container to load balance**/**Add to load balancer** 선택
-* **Production listener port**: matchmaker:0:8888 을 로드밸런서에 추가(Add to load balancer)
-* **Target group name**: matchmaker
+* **Container to load balance**
+  * **Container name: port** 항목을 matchmaker:0:8888를 선택하고 **Add to load balancer** 선택
+  * **Production listener port**: 80:HTTP를 선택
+  * **Target group name**: matchmaker 선택
 * **Enable service discovery integration**: 선택 해제
 
 **Next step**을 선택하여 다음 화면으로 넘어갑니다.
