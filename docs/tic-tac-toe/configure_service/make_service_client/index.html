@@ -18,21 +18,21 @@
     <title>클라이언트 서비스 만들기 :: ECS HoL</title>
 
     
-    <link href="../../../css/nucleus.css?1570698978" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1570698978" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1570698978" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1570698978" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1570698978" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1570698978" rel="stylesheet">
-    <link href="../../../css/theme.css?1570698978" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1570698978" rel="stylesheet">
-    <link href="../../../css/jquery-ui.min.css?1570698978" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1571055279" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1571055279" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1571055279" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1571055279" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1571055279" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1571055279" rel="stylesheet">
+    <link href="../../../css/theme.css?1571055279" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1571055279" rel="stylesheet">
+    <link href="../../../css/jquery-ui.min.css?1571055279" rel="stylesheet">
     
-      <link href="../../../css/theme-mine.css?1570698978" rel="stylesheet">
+      <link href="../../../css/theme-mine.css?1571055279" rel="stylesheet">
     
 
-    <script src="../../../js/jquery-3.3.1.min.js?1570698978"></script>
-    <script src="../../../js/jquery-ui-1.12.1.min.js?1570698978"></script>
+    <script src="../../../js/jquery-3.3.1.min.js?1571055279"></script>
+    <script src="../../../js/jquery-ui-1.12.1.min.js?1571055279"></script>
 
 
     <style type="text/css">
@@ -64,14 +64,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../../js/lunr.min.js?1570698978"></script>
-<script type="text/javascript" src="../../../js/auto-complete.js?1570698978"></script>
+<script type="text/javascript" src="../../../js/lunr.min.js?1571055279"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1571055279"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../../js/search.js?1570698978"></script>
+<script type="text/javascript" src="../../../js/search.js?1571055279"></script>
 
     
   </div>
@@ -1398,12 +1398,15 @@
 <li>WebServer-SG 선택</li>
 </ol></li>
 <li><strong>Auto-assign public IP</strong> ENABLED</li>
-<li><strong>Load balancer type</strong>: Application Load Balancer
-<!-- * **Service IAM role**: 대시보드 서비스를 만들때 자동 생성한 IAM 역할이 있습니다. AWSServiceRoleForECS 선택합니다. --></li>
+<li><strong>Load balancer type</strong>: Application Load Balancer</li>
 <li><strong>Load balancer name</strong>: tic-tac-toe-client-ALB</li>
-<li><strong>Container to load balance</strong>/<strong>Add to load balancer</strong> 선택</li>
+<li><strong>Container to load balance</strong>
+
+<ul>
+<li><strong>Container name : port</strong> tic-tac-toe-client:80:80을 선택하고 <strong>Add to load balancer</strong> 선택</li>
 <li><strong>Production listener port</strong>: 80:HTTP 선택</li>
 <li><strong>Target group name</strong>: tic-tac-toe-client 선택</li>
+</ul></li>
 <li><strong>Enable service discovery integration</strong>: 선택 해체</li>
 </ul>
 
@@ -2343,20 +2346,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1570698978"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1570698978"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1570698978"></script>
-    <script src="../../../js/jquery.sticky.js?1570698978"></script>
-    <script src="../../../js/featherlight.min.js?1570698978"></script>
-    <script src="../../../js/html5shiv-printshiv.min.js?1570698978"></script>
-    <script src="../../../js/highlight.pack.js?1570698978"></script>
+    <script src="../../../js/clipboard.min.js?1571055279"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1571055279"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1571055279"></script>
+    <script src="../../../js/jquery.sticky.js?1571055279"></script>
+    <script src="../../../js/featherlight.min.js?1571055279"></script>
+    <script src="../../../js/html5shiv-printshiv.min.js?1571055279"></script>
+    <script src="../../../js/highlight.pack.js?1571055279"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom-3.6.0.js?1570698978"></script>
-    <script src="../../../js/learn.js?1570698978"></script>
-    <script src="../../../js/hugo-learn.js?1570698978"></script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1571055279"></script>
+    <script src="../../../js/learn.js?1571055279"></script>
+    <script src="../../../js/hugo-learn.js?1571055279"></script>
 
-    <link href="../../../mermaid/mermaid.css?1570698978" type="text/css" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.min.js?1570698978"></script>
+    <link href="../../../mermaid/mermaid.css?1571055279" type="text/css" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.min.js?1571055279"></script>
     <script>
 	var config = {
         startOnLoad:true,

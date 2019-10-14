@@ -32,7 +32,7 @@
 서비스 구성  Launch type: FARGATE Task Definition: Family: tic-tac-toe-client, Revision: 1 Service name: tic-tac-toe-client Number of tasks: 2  다른 옵션은 기본값을 사용합니다.
 Next step 을 선택합니다.
 네트워크 구성 아래와 같이 입력합니다.
- Cluster VPC: tic-tac-toe-vpc Subnets: 선택 가능한 2개의 서브넷 모두 선택 Security groups  Edit 선택 Select existing security group 선택 WebServer-SG 선택  Auto-assign public IP ENABLED Load balancer type: Application Load Balancer  Load balancer name: tic-tac-toe-client-ALB Container to load balance/Add to load balancer 선택 Production listener port: 80:HTTP 선택 Target group name: tic-tac-toe-client 선택 Enable service discovery integration: 선택 해체  Next step 선택</description>
+ Cluster VPC: tic-tac-toe-vpc Subnets: 선택 가능한 2개의 서브넷 모두 선택 Security groups  Edit 선택 Select existing security group 선택 WebServer-SG 선택  Auto-assign public IP ENABLED Load balancer type: Application Load Balancer Load balancer name: tic-tac-toe-client-ALB Container to load balance  Container name : port tic-tac-toe-client:80:80을 선택하고 Add to load balancer 선택 Production listener port: 80:HTTP 선택 Target group name: tic-tac-toe-client 선택  Enable service discovery integration: 선택 해체  Next step 선택</description>
     </item>
     
     <item>
