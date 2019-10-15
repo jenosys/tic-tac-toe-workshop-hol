@@ -28,7 +28,7 @@
       
       <guid>/tic-tac-toe/configure_alb/make_matchmaker_target_group/</guid>
       <description>EC2 서비스로 넘어갑니다. 좌측 사이드 메뉴에서 Target Groups를 선택하고 Create target group을 선택하고 아래와 같이 입력합니다.
- Target group name: matchmaker Target type: instance Port: 8888 VPC: tic-tac-toe-vpc Health check settings/Path: /api/health 나머지 항목은 기본값으로 둡니다.   헬스체크 시간을 단축하기 위해 Advanced health check settings의 파라메터를 아래와 같이 수정합니다.
+ Target group name: matchmaker Target type: instance Protocol: http Port: 8888 VPC: tic-tac-toe-vpc Health check settings/Path: /api/health 나머지 항목은 기본값으로 둡니다.   헬스체크 시간을 단축하기 위해 Advanced health check settings의 파라메터를 아래와 같이 수정합니다.
  Healthy threshold: 2 Interval: 10   Create를 선택하여 타겟그룹을 생성합니다.</description>
     </item>
     
@@ -40,7 +40,7 @@
       <guid>/tic-tac-toe/configure_alb/make_other_target_groups/</guid>
       <description>타겟그룹을 2개 더 만듭니다.
 대시보드 타겟 그룹 생성 앞서 만든 매치메이커 타겟그룹과 과정은 동일합니다.
- Create target group을 선택하고 아래와 같이 입력합니다.  Target group name: dashboard Target type: ip Port: 80 VPC: tic-tac-toe-vpc Health check settings - Path: / 나머지 항목은 기본값으로 둡니다.    헬스체크 시간을 단축하기 위해 Advanced health check settings의 파라메터를 아래와 같이 수정합니다.
+ Create target group을 선택하고 아래와 같이 입력합니다.  Target group name: dashboard Target type: ip Protocol: http Port: 80 VPC: tic-tac-toe-vpc Health check settings - Path: / 나머지 항목은 기본값으로 둡니다.    헬스체크 시간을 단축하기 위해 Advanced health check settings의 파라메터를 아래와 같이 수정합니다.
  Healthy threshold: 2 Interval: 10   Create를 선택하여 타겟그룹을 생성합니다.</description>
     </item>
     
