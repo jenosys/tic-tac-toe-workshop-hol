@@ -13,6 +13,7 @@ weight: 4
 1. **Create target group**을 선택하고 아래와 같이 입력합니다.
  * **Target group name**: dashboard
  * **Target type**: ip
+ * **Protocol**: http
  * **Port**: 80
  * **VPC**: tic-tac-toe-vpc
  * **Health check settings - Path**: /
@@ -35,6 +36,7 @@ weight: 4
 1. **Create target group**을 선택하고 아래와 같이 입력합니다.
  * **Target group name**: tic-tac-toe-client
  * **Target type**: ip
+ * **Protocol**: http
  * **Port**: 80
  * **VPC**: tic-tac-toe-vpc
  * **Health check settings - Path**: /

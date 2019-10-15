@@ -9,6 +9,7 @@ weight: 3
 
  * **Target group name**: matchmaker
  * **Target type**: instance
+ * **Protocol**: http
  * **Port**: 8888
  * **VPC**: tic-tac-toe-vpc
  * **Health check settings**/**Path**: /api/health
